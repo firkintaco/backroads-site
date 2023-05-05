@@ -2,7 +2,6 @@ import React from "react";
 import logo from "../images/logo.svg";
 
 const Navbar = ({ pageLinks, socialLinks }) => {
-  console.log(pageLinks);
   return (
     <nav className="navbar">
       <div className="nav-center">
@@ -12,11 +11,11 @@ const Navbar = ({ pageLinks, socialLinks }) => {
             <i className="fas fa-bars"></i>
           </button>
         </div>
-        <ul class="nav-links" id="nav-links">
+        <ul className="nav-links" id="nav-links">
           {pageLinks.map((link) => {
             return (
               <li key={link.id}>
-                <a href={link.href} class="nav-link">
+                <a href={link.href} className="nav-link">
                   {link.text}
                 </a>
               </li>
@@ -24,12 +23,12 @@ const Navbar = ({ pageLinks, socialLinks }) => {
           })}
         </ul>
 
-        <ul class="nav-icons">
+        <ul className="nav-icons">
           {socialLinks.map((link) => {
             return (
               <li key={link.id}>
-                <a href={link.href} target="_blank" class="nav-icon">
-                  <i class={link.icon}></i>
+                <a href={link.href} target="_blank" className="nav-icon">
+                  <i className={link.icon}></i>
                 </a>
               </li>
             );

@@ -1,32 +1,28 @@
 import React from "react";
+import Title from "./Title";
 
 const Tours = ({ data }) => {
-  console.log(data);
   return (
-    <section class="section" id="tours">
-      <div class="section-title">
-        <h2>
-          featured <span>tours</span>
-        </h2>
-      </div>
+    <section className="section" id="tours">
+      <Title firstWord="featured" lastWord="tours" />
 
-      <div class="section-center featured-center">
+      <div className="section-center featured-center">
         {data.map((tour) => {
           return (
-            <article key={tour.id} class="tour-card">
-              <div class="tour-img-container">
-                <img src={tour.image} class="tour-img" alt={tour.title} />
-                <p class="tour-date">{tour.date}</p>
+            <article key={tour.id} className="tour-card">
+              <div className="tour-img-container">
+                <img src={tour.image} className="tour-img" alt={tour.title} />
+                <p className="tour-date">{tour.date}</p>
               </div>
-              <div class="tour-info">
-                <div class="tour-title">
+              <div className="tour-info">
+                <div className="tour-title">
                   <h4>{tour.title}</h4>
                 </div>
                 <p>{tour.info}</p>
-                <div class="tour-footer">
+                <div className="tour-footer">
                   <p>
                     <span>
-                      <i class="fas fa-map"></i>
+                      <i className="fas fa-map"></i>
                     </span>
                     {tour.location}
                   </p>

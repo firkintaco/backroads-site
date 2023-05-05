@@ -2,17 +2,17 @@ import React from "react";
 
 const Footer = ({ pageLinks, socialLinks }) => {
   return (
-    <footer class="section footer">
-      <ul class="footer-links">
+    <footer className="section footer">
+      <ul className="footer-links">
         {pageLinks.map((link) => (
-          <li>
+          <li key={link.id}>
             <a href={link.href} className="footer-link">
               {link.text}
             </a>
           </li>
         ))}
       </ul>
-      <ul class="footer-icons">
+      <ul className="footer-icons">
         {socialLinks.map((link) => (
           <li key={link.id}>
             <a href={link.href} className="footer-icon">
@@ -21,7 +21,7 @@ const Footer = ({ pageLinks, socialLinks }) => {
           </li>
         ))}
       </ul>
-      <p class="copyright">
+      <p className="copyright">
         copyright &copy; Backroads travel tours company
         <span id="date"></span> all rights reserved
       </p>
